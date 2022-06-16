@@ -1,0 +1,26 @@
+Loan Default Prediction 
+Data Loading
+	While Loading Mention SK_ID_CURR as index
+Data setting
+	Rearranging the datatypes and modifing the day to years as per col in data
+Checking 
+	*Bivariate Analysis Numerical-Numerical
+	*Bivariate Analysis Numerical-Categorical
+	*Bivariate Analysis Categorical-Categorical
+Treating Missing Values:
+	-If there is no Car there will be no age so we are considering car age as 0 where there is no car
+	-Assuming that if there was no Request of credit details from bureau it is null so we are Replacing it with 0
+	-Since the Data missing is Greater than  5% of our data we are consedering it as others
+	-Droping the other Few Row with less nan Values
+Checking for if Outerlier are really Outerlier or missing Values:
+	+Since the the incom total is outlier, by consdering  OCCUPATION_TYPE , Assigning the Mean Income total
+	+Since the AMT_REQ_CREDIT_BUREAU_QRT is miss enter or out of the other entries, changing to Mode of that column
+
+Grouping Categorical variable:
+	Based on the Distribution of the Categotial on the Target varible binning or Grouping Those Category together
+
+One-Hot Encoding for Categorical variable:
+	By Using Pandndas getdummies Fuction creating one hot encoding and droping the First Columns
+
+Cleaned Data is Converted into Csv file:
+	Processed_data.csv
